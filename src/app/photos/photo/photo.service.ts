@@ -5,13 +5,13 @@ import { Photo } from "./photo";
 const API = 'http://localhost:3000';
 
 @Injectable({ providedIn: 'root' })
-export class PhotoService{
+export class PhotoService {
 
-    constructor(private http: HttpClient){
+    constructor(private http: HttpClient) {
 
     }
 
-    listFromUser(userName: string){
-        return this.http.get<Photo[]>( API + '/' + userName + '/photos');
+    listFromUser(userName: string) {
+        return this.http.get<Photo[]>(API + '/' + userName + '/photos');
     }
 }

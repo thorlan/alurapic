@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
+import { AppRoutingModule } from './app.routing.module';
+import { ErrorsModule } from './errors/errors.module';
+import { NavModule } from './nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { PhotosModule } from './photos/photos.module';
   imports: [
     BrowserModule,
     PhotosModule,
-    HttpClientModule
+    AppRoutingModule,
+    ErrorsModule,
+    NavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
